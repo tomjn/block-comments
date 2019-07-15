@@ -45,9 +45,12 @@ window.tomjn_wp_editor = function( id, inputName, content ) {
 	// find our element and swap it out for a div container
 	const original = document.getElementById( id );
 	
-	// make the content parameter optional, if it's not present we can use the value of the target element
+	// make the content and inputName parameters optional
 	if ( content == undefined ) {
 		content = original.value;
+	}
+	if ( inputName == undefined ) {
+		inputName = original.name;
 	}
 
 	// Now we can create and swap out the element, this is to give React a nice div node to work with
