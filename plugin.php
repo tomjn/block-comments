@@ -15,7 +15,11 @@ add_action( 'admin_enqueue_scripts', 'tomjn_block_assets' );
  * @return void
  */
 function tomjn_block_assets(){
-    wp_register_script(
+
+	if ( !is_singular() || !comments_open() ) {
+		return;
+	}
+    wp_enqueue_script(
     	'tomjn_gb_js',
     	plugins_url( 'built.js', __FILE__ ),
     	[
@@ -29,7 +33,7 @@ function tomjn_block_assets(){
     	true
     );
     
-    wp_register_style(
+    wp_enqueue_style(
     	'tomjn_gb_css',
         plugins_url( 'editor.css', __FILE__ ),
         [
@@ -91,13 +95,4 @@ function wp_block_editor( $content, $name ) {
     });
     </script>
     <?php
-}
-
-// Enqueue the scripts, @TODO: Only enqueue when a comment form is present
-add_action( 'wp_enqueue_scripts', 'tomjn_add_block_comment_form' );
-function tomjn_add_block_comment_form() {
-	if ( is_singular() && comments_open() ) {
-		wp_enqueue_script('tomjn_gb_js');
-		wp_enqueue_style('tomjn_gb_css');
-	}
 }
