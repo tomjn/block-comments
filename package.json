@@ -1,0 +1,29 @@
+{
+  "name": "tomjn_gb",
+  "version": "0.1.0",
+  "description": "A Gutenberg implementation",
+  "main": "js/main.js",
+  "scripts": {
+    "build": "NODE_ENV=development webpack --progress --hide-modules --config webpack.config.js"
+  },
+  "author": "Tom J Nowell",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://tomjn.com"
+  },
+  "homepage": "https://tomjn.com",
+  "browserslist": "> 0.25%, not dead",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-polyfill": "^6.26.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.2"
+  },
+  "dependencies": {
+    "@wordpress/block-library": "*"
+  }
+}

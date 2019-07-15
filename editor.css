@@ -1,0 +1,33 @@
+.tomjn_editor_container {
+	position: relative;
+}
+.tomjn_editor_container .editor-styles-wrapper p {
+    font-size: 22px;
+}
+.tomjn_editor_container .editor-styles-wrapper ol,
+.tomjn_editor_container .editor-styles-wrapper p,
+.tomjn_editor_container .editor-styles-wrapper ul {
+    margin-bottom: 28px;
+}
+.editor-styles-wrapper p {
+    font-size: inherit;
+    line-height: inherit;
+    margin-top: 28px;
+}
+.tomjn_editor_container {
+	min-width:500px;
+	min-height:100px;
+	border: 1px solid #eeeeee;
+	background: white;
+	border-radius:6px;
+	padding: 28px;
+}
+.tomjn_editor_container .components-panel__body-title::before {
+	display:none;
+}
+.tomjn_editor_container .block-editor__container .components-panel__body-toggle {
+    background: transparent;
+}
+.tomjn_editor_container .block-editor__container button:hover {
+    background: transparent;
+}
