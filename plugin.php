@@ -94,9 +94,10 @@ function wp_block_editor( $content, $name ) {
 }
 
 // Enqueue the scripts, @TODO: Only enqueue when a comment form is present
-add_action( 'admin_enqueue_scripts', 'tomjn_add_block_comment_form' );
 add_action( 'wp_enqueue_scripts', 'tomjn_add_block_comment_form' );
 function tomjn_add_block_comment_form() {
-	wp_enqueue_script('tomjn_gb_js');
-	wp_enqueue_style('tomjn_gb_css');
+	if ( is_singular() && comments_open() ) {
+		wp_enqueue_script('tomjn_gb_js');
+		wp_enqueue_style('tomjn_gb_css');
+	}
 }
