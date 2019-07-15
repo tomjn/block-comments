@@ -9,17 +9,20 @@ const { serialize, parse } = wp.blocks;
 
 function Editor ( { startingContent, inputName }) {
 	const [ blocks, updateBlocks ] = React.useState( parse(startingContent) );
-	return <div className="editor-styles-wrapper">
+	return <React.Fragment>
 		<BlockEditorProvider value={ blocks } onInput={ updateBlocks } onChange={ updateBlocks }>
 			<WritingFlow>
 				<ObserveTyping>
-					<BlockList />
+					<div className="editor-styles-wrapper">
+						<BlockList />
+					</div>
 				</ObserveTyping>
 			</WritingFlow>
 			<Popover.Slot />
 		</BlockEditorProvider>
 		<input type="hidden" name={inputName} value={serialize(blocks)}/>
-	</div>;
+	</React.Fragment>
+	;
 }
 
 export default Editor;
