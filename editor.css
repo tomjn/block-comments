@@ -14,6 +14,10 @@
 .tomjn_editor_container .editor-styles-wrapper ul {
 	list-style: disc outside none;
 }
+
+.tomjn_editor_container .components-popover * {
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+}
 .editor-styles-wrapper p {
     font-size: inherit;
     line-height: inherit;
