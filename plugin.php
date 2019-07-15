@@ -81,6 +81,8 @@ function wp_block_editor( $content, $name ) {
     <?php
 }
 
+
+add_action( 'admin_enqueue_scripts', 'tomjn_add_block_comment_form' );
 add_action( 'wp_enqueue_scripts', 'tomjn_add_block_comment_form' );
 function tomjn_add_block_comment_form() {
 	wp_enqueue_script('tomjn_gb_js');
