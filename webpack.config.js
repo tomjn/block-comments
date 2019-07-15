@@ -1,6 +1,5 @@
 const path = require('path')
 
-//  devtool: 'source-map',
 module.exports = {
   mode: process.env.NODE_ENV,
   entry: './js/main.js',
