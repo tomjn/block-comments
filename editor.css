@@ -1,4 +1,4 @@
-button.editor-block-types-list__item:hover {
+.tomjn_editor_container button.editor-block-types-list__item:hover {
 	background: transparent;
 }
 .tomjn_editor_container .editor-styles-wrapper p {
@@ -35,4 +35,115 @@ button.editor-block-types-list__item:hover {
 }
 .tomjn_editor_container .block-editor__container button:hover {
     background: transparent;
+}
+
+/* Text meant only for screen readers. */
+.tomjn_editor_container .screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.tomjn_editor_container .screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+.tomjn_editor_container .block-editor-block-list__layout {
+	padding-left: 0;
+	padding-right: 0;
+}
+.editor-styles-wrapper .alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.editor-styles-wrapper .aligncenter,
+.editor-styles-wrapper div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.editor-styles-wrapper .alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.editor-styles-wrapper .alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.editor-styles-wrapper a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+.editor-styles-wrapper a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.editor-styles-wrapper a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.editor-styles-wrapper a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.editor-styles-wrapper .wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.editor-styles-wrapper .wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.editor-styles-wrapper .wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.editor-styles-wrapper .wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.editor-styles-wrapper .wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.editor-styles-wrapper .wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
 }
