@@ -9,6 +9,11 @@
 .tomjn_editor_container .editor-styles-wrapper ul {
     margin-bottom: 28px;
 }
+
+.tomjn_editor_container .editor-styles-wrapper ol,
+.tomjn_editor_container .editor-styles-wrapper ul {
+	list-style: disc outside none;
+}
 .editor-styles-wrapper p {
     font-size: inherit;
     line-height: inherit;
