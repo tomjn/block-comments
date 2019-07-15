@@ -1,5 +1,5 @@
-.tomjn_editor_container {
-	position: relative;
+button.editor-block-types-list__item:hover {
+	background: transparent;
 }
 .tomjn_editor_container .editor-styles-wrapper p {
     font-size: 22px;
