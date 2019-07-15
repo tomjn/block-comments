@@ -9,9 +9,12 @@
 
 add_action( 'wp_enqueue_scripts', 'tomjn_block_assets' );
 add_action( 'admin_enqueue_scripts', 'tomjn_block_assets' );
+/**
+ * Register our assets and do any work needed to make the block editor work
+ * 
+ * @return void
+ */
 function tomjn_block_assets(){
-    //wp_enqueue_style('wp-edit-post');
-
     wp_register_script(
     	'tomjn_gb_js',
     	plugins_url( 'built.js', __FILE__ ),
@@ -44,6 +47,8 @@ function tomjn_block_assets(){
         // TEMPORARY: Core does not (yet) provide persistence migration from the
         // introduction of the block editor and still calls the data plugins.
         // We unset the existing inline scripts first.
+        // 
+        // If we don't do this, any core blocks will break on the frontend when added
         $wp_scripts->registered['wp-data']->extra['after'] = array();
         wp_add_inline_script(
             'wp-data',
@@ -64,6 +69,13 @@ function tomjn_block_assets(){
     }
 }
 
+/**
+ * Creates a basic Block Editor instance with an associated input for form handling
+ * 
+ * @param  string $content The initial content
+ * @param  string $name    The name of the input
+ * @return void
+ */
 function wp_block_editor( $content, $name ) {
 	wp_enqueue_script('tomjn_gb_js');
 	wp_enqueue_style('tomjn_gb_css');
@@ -81,7 +93,7 @@ function wp_block_editor( $content, $name ) {
     <?php
 }
 
-
+// Enqueue the scripts, @TODO: Only enqueue when a comment form is present
 add_action( 'admin_enqueue_scripts', 'tomjn_add_block_comment_form' );
 add_action( 'wp_enqueue_scripts', 'tomjn_add_block_comment_form' );
 function tomjn_add_block_comment_form() {
