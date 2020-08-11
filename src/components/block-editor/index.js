@@ -21,7 +21,6 @@ import {
 import InterfaceSkeleton from 'components/interface-skeleton';
 import Notices from 'components/notices';
 import Header from 'components/header';
-import Sidebar from 'components/sidebar';
 
 function BlockEditor( { settings, blocks, updateBlocks } ) {
 	return (
@@ -35,14 +34,10 @@ function BlockEditor( { settings, blocks, updateBlocks } ) {
 					>
 					<InterfaceSkeleton
 						header={ <Header /> }
-						sidebar={ <Sidebar /> }
 						content={
 							<Fragment>
 								<Notices />
 								<div className="block-editor">
-									<Sidebar.InspectorFill>
-										<BlockInspector />
-									</Sidebar.InspectorFill>
 									<div className="editor-styles-wrapper">
 										<Popover.Slot name="block-toolbar" />
 										<BlockEditorKeyboardShortcuts />

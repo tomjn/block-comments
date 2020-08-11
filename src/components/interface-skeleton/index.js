@@ -7,7 +7,6 @@ import classnames from 'classnames';
  * WordPress dependencies
  */
 import { useEffect } from '@wordpress/element';
-import { navigateRegions } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 function useHTMLClass( className ) {
